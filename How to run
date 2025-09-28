@@ -1,0 +1,38 @@
+How to Run
+
+Install dependencies
+
+pip install -r requirements.txt
+
+
+Prepare dataset
+
+Place training and testing images under:
+
+dataset/images/train/<class_names>/
+dataset/images/test/<class_names>/
+
+
+Example:
+
+dataset/images/train/happy/xxx.png
+dataset/images/train/sad/yyy.png
+
+
+Train the model
+
+python train.py
+
+
+This will save the trained model as emotion_model.keras.
+
+Run the Streamlit app
+
+streamlit run app.py
+
+
+Use the app
+
+Choose Upload Image to test static images.
+
+Choose Webcam for real-time emotion recognition.
