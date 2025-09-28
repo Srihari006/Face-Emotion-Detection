@@ -1,0 +1,31 @@
+This project is a Facial Emotion Recognition System developed using TensorFlow/Keras, OpenCV, and Streamlit. It leverages deep learning techniques to detect and classify human emotions from facial expressions in both images and real-time video streams.
+
+🔹 Training the Model (train.py)
+
+The training script builds a Convolutional Neural Network (CNN) designed to classify emotions from grayscale face images of size 48x48 pixels. The dataset is organized into two directories:
+
+dataset/images/train – for training images.
+
+dataset/images/test – for testing/validation images.
+
+To improve performance, the training pipeline integrates data augmentation (rotation, zoom, shifting, brightness adjustment, and horizontal flipping). Additionally, callbacks such as Early Stopping, ReduceLROnPlateau, and Model Checkpointing are used to optimize training and save the best-performing model as emotion_model.keras.
+
+🔹 Application Interface (app.py)
+
+The application is powered by Streamlit, providing a user-friendly web interface with two main features:
+
+Upload Image – Users can upload a facial image (JPG, PNG, or JPEG). The model processes the image and predicts the most likely emotion, displaying it alongside the uploaded photo.
+
+Webcam Detection – Real-time face and emotion detection using OpenCV Haar cascades and Streamlit WebRTC. The system captures frames from the webcam, detects faces, and overlays the predicted emotion on the live video feed.
+
+🔹 Key Features
+
+End-to-end pipeline: from dataset preparation to real-time deployment.
+
+Lightweight CNN architecture optimized for emotion classification.
+
+Interactive web application with both image upload and webcam support.
+
+Modular design for easy customization and future improvements.
+
+This project demonstrates how deep learning and computer vision can be combined to build intelligent applications capable of understanding human emotions. It can be extended for use in areas such as mental health monitoring, human-computer interaction, and customer experience analysis.
